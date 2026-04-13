@@ -1,0 +1,134 @@
+<div class="dashboard">
+
+  <div class="page-header">
+    <h1>Take Attendance</h1>
+    <p>Mark attendance for your classes</p>
+  </div>
+
+  <div class="form-card">
+    <div class="form-card-title">Select Class</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Class</label>
+        <select class="form-input">
+          <option>10-A</option>
+          <option>10-B</option>
+          <option>11-A</option>
+          <option>12-B</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select class="form-input">
+          <option>Mathematics</option>
+          <option>Physics</option>
+          <option>Chemistry</option>
+          <option>English</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-input" value="2026-03-04">
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-header">
+      <span class="table-title">Class 10-A — Attendance</span>
+      <div class="summary">
+        <span class="pill green">Present: 4</span>
+        <span class="pill red">Absent: 1</span>
+        <span class="pill yellow">Late: 1</span>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ROLL NO</th>
+          <th>STUDENT NAME</th>
+          <th>STATUS</th>
+          <th>MARK</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Aanya Sharma</td>
+          <td><span class="pill green">Present</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present active">P</button>
+              <button class="att-btn absent">A</button>
+              <button class="att-btn late">L</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Rahul Verma</td>
+          <td><span class="pill red">Absent</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present">P</button>
+              <button class="att-btn absent active">A</button>
+              <button class="att-btn late">L</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Priya Nair</td>
+          <td><span class="pill green">Present</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present active">P</button>
+              <button class="att-btn absent">A</button>
+              <button class="att-btn late">L</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Kiran Patel</td>
+          <td><span class="pill green">Present</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present active">P</button>
+              <button class="att-btn absent">A</button>
+              <button class="att-btn late">L</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>Sneha Iyer</td>
+          <td><span class="pill yellow">Late</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present">P</button>
+              <button class="att-btn absent">A</button>
+              <button class="att-btn late active">L</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>006</td>
+          <td>Arjun Mehta</td>
+          <td><span class="pill green">Present</span></td>
+          <td>
+            <div class="att-buttons">
+              <button class="att-btn present active">P</button>
+              <button class="att-btn absent">A</button>
+              <button class="att-btn late">L</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-footer">
+      <button class="btn-save">Submit Attendance</button>
+    </div>
+  </div>
+
+</div>

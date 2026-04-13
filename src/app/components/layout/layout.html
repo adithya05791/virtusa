@@ -1,0 +1,95 @@
+<div class="shell">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="logo-mark">EP</div>
+      <span class="logo-name">EduPortal</span>
+      <span class="role-tag"
+        [class.student]="role === 'Student'"
+        [class.teacher]="role === 'Teacher'"
+        [class.admin]="role === 'Admin'">
+        {{ role }}
+      </span>
+    </div>
+    <div class="topbar-right">
+      <div class="user-info">
+        <div class="user-name">{{ user?.name }}</div>
+        <div class="user-id">{{ user?.id }}</div>
+      </div>
+      <button class="btn-logout" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="body-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      @if(role === 'Student') {
+        <div class="ss-label">Main</div>
+        <div class="nav-item" routerLink="/student/dashboard" routerLinkActive="active">
+          Dashboard
+        </div>
+        <div class="nav-item" routerLink="/student/timetable" routerLinkActive="active">
+          Timetable
+        </div>
+        <div class="ss-label">Academics</div>
+        <div class="nav-item" routerLink="/student/grades" routerLinkActive="active">
+          My Grades
+        </div>
+        <div class="nav-item" routerLink="/student/attendance" routerLinkActive="active">
+          Attendance
+        </div>
+      }
+
+      @if(role === 'Teacher') {
+        <div class="ss-label">Main</div>
+        <div class="nav-item" routerLink="/teacher/dashboard" routerLinkActive="active">
+          Dashboard
+        </div>
+        <div class="nav-item" routerLink="/student/timetable" routerLinkActive="active">
+          Timetable
+        </div>
+        <div class="ss-label">Classroom</div>
+        <div class="nav-item" routerLink="/teacher/marks" routerLinkActive="active">
+          Upload Marks
+        </div>
+        <div class="nav-item" routerLink="/teacher/attendance" routerLinkActive="active">
+          Take Attendance
+        </div>
+      }
+
+      @if(role === 'Admin') {
+        <div class="ss-label">Main</div>
+        <div class="nav-item" routerLink="/admin/dashboard" routerLinkActive="active">
+          Dashboard
+        </div>
+        <div class="ss-label">Management</div>
+        <div class="nav-item" routerLink="/admin/users" routerLinkActive="active">
+          User Management
+        </div>
+        <div class="nav-item" routerLink="/admin/reports" routerLinkActive="active">
+          Reports
+        </div>
+        <div class="ss-label">Academics</div>
+        <div class="nav-item" routerLink="/student/timetable" routerLinkActive="active">
+          Timetable
+        </div>
+        <div class="nav-item" routerLink="/student/grades" routerLinkActive="active">
+          Student Grades
+        </div>
+        <div class="nav-item" routerLink="/student/attendance" routerLinkActive="active">
+          Attendance
+        </div>
+      }
+
+    </aside>
+
+    <!-- PAGES LOAD HERE -->
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>

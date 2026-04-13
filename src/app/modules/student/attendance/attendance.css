@@ -1,0 +1,103 @@
+.dashboard { padding: 28px 32px; }
+
+.page-header { margin-bottom: 24px; }
+.page-header h1 { font-size: 26px; font-weight: 800; color: #0f172a; margin-bottom: 4px; }
+.page-header p  { color: #64748b; font-size: 14px; }
+
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card-value { font-size: 26px; font-weight: 800; }
+.card-label { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+
+.blue   { color: #2563eb; }
+.green  { color: #059669; }
+.orange { color: #d97706; }
+.red    { color: #dc2626; }
+
+.table-wrap {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-title { font-size: 14px; font-weight: 700; color: #0f172a; }
+
+table { width: 100%; border-collapse: collapse; }
+
+th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 12px 20px;
+  font-size: 13px;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+tr:last-child td { border-bottom: none; }
+
+.progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.progress-fill.green  { background: #059669; }
+.progress-fill.orange { background: #d97706; }
+.progress-fill.red    { background: #dc2626; }
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pill.green  { background: #f0fdf4; color: #059669; border: 1px solid #bbf7d0; }
+.pill.blue   { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+.pill.yellow { background: #fffbeb; color: #d97706; border: 1px solid #fcd34d; }
+.pill.red    { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
